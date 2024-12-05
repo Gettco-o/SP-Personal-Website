@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Ubuntu', sans-serif;  
+}
+
+body {
+    background: #0a0a23;
+    min-height: 200vh;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 40px;
+    z-index: 100000;
+}
+
+
+header a {
+    text-decoration: none;
+    position: relative;
+    font-weight: 700;
+    color: #4a97f0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    transition: 0.6s; 
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+
+}
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    color:  #fff;
+}
+header ul li a:hover {
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    color:  #4a97f0;
+}
+
+.menubtn {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    text-decoration: none;
+}
+#check {
+    display: none;
+}
+
+@media only screen and (min-width: 769px) {
+
+    header.sticky {
+        padding: 20px 40px;
+        background: #4a97f0;;
+    
+    }
+    
+    header.sticky a,
+    header.sticky .menubtn,
+    header.sticky ul li a {
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header a {
+        font-size: 1.5em;
+        font-weight: 500px;
+    }
+    header ul li a {
+        margin: 0 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 16fr 1fr;
+        grid-template-rows: 55px;
+        line-height: 4;
+        background: #4a97f0;
+        padding: 0 40px;
+    }
+
+    header a {
+        font-size: 2em;
+        padding-top: 0;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header a,
+    header .menubtn,
+    header ul li a {
+    color: #fff;
+    }
+
+    .menubtn {
+        display:block;
+    }
+
+    #check:checked + label + ul{
+        grid-column: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+    }
+    .section {
+        top: 8em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        line-height: 3;
+    }
+    .menubtn {
+        font-size: 25px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 400px) {
+    header {
+        line-height: 3;
+    }
+    header a {
+        font-size: 1.5em;
+    }
+    .menubtn {
+        font-size: 22px;
+    }
+}
+
+
+.section {
+    color: #fff;
+    margin-top: 60px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    
+
+}
+
+.intro {
+    width: 50%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.btn {
+    font-size: 18px;
+    width: 28%;
+    word-spacing: 0%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4a97f0;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10;
+}
+
+.about-me {
+    margin-top: 20;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.img-container {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    
+}
+.img-container img {
+    display: block;
+    border-radius: 8px;
+}
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: 60;
+    left: 50;
+    width: 80%;
+    height: 100%;
+    border: 8px solid #4a97f0;
+    border-radius: 8px;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.about-me #about-note {
+    padding-top: 40px;
+    padding-right: 20px;
+    width: 50%;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+
+}
+
+#act-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn1 {
+    font-size: 16px;
+    width: 20%;
+    height: 10%;
+    word-spacing: 0%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4a97f0;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10;
+}
+
+.portfolio {
+    margin-top: 120;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.project {
+    margin-top: 20;
+    display: flex;
+}
+
+.project #project-note {
+    padding-top: 40px;
+    padding-right: 20px;
+    width: 50%;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+}
+
+.experience {
+    margin-top: 120;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    
+}
+
+.icons {
+    font-size: 64px;
+    font-weight: 800;
+    color: #4a97f0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+
+.a-serv {
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #1a1a40;
+    justify-content: space-between;
+    gap: 24px;
+    
+}
+
+.a-serv p {
+    padding-left: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+   
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 18px;
+    
+}
+
+.contact-box i {
+    font-size: 32px;
+    font-weight: 800;    
+}
+
+/**/
+
+
+@media only screen and (max-width: 768px) {
+    .intro {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .btn {
+        width: 60%;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio {
+        margin-top: 60px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #project-note {
+        text-align: center;
+    }
+
+    .experience {
+        gap: 12px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .a-serv {
+        width: 100%;
+        max-width: none;
+    }
+
+    .about-me #about-note {
+        padding-top: 48px;
+        width: 96%;
+        font-size: 16px;
+        line-height: 2;
+        font-weight: 500;
+    
+    }
+
+    .project #project-note {
+        padding-top: 48px;
+        padding-right: 20px;
+        width: 96%;
+        font-size: 16px;
+        line-height: 2;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .btn, .btn1 {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .intro {
+        font-size: 30px;
+    }
+
+    .icons {
+        font-size: 32px;
+    }
+
+    .about-me #about-note {
+        padding-top: 48px;
+        width: 96%;
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 500;
+    
+    }
+
+    .project #project-note {
+        padding-top: 48px;
+        padding-right: 20px;
+        width: 96%;
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 500;
+    }
+
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.gallery-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 50;
+    padding: 12px;
+}
+
+.gallery-space {
+    background-color: #1a1a40;
+    padding:0 18rem;
+    border-radius: 8px;
+    width: 50%;
+    height: 70%;
+    overflow: auto;
+    
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4a97f0;
+}
+
+.gallery-container {
+    /*display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    */
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 20rem;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
